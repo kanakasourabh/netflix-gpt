@@ -72,8 +72,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Create React App
 - Configured Tailwind
 - Header
+- Routing of App
 - Login Form
 - Sign up Form
+- Form Validation
+- useRef Hook
+- Firebase SetUp
+- Deploying our app to production
+- Create Sgn Up user account
+- Implement Sign In user API
+- Created Redux store with user slice
+- Implemented Sign out
+- Update Profile
+- BugFix :- Sign Up user display name and Profile picture update
+- BugFix :- if the user is not logged in redirect /browse to login page and vice-versa
+- Unsubscribed to the onAuthStateChange Callback
 
 
 
