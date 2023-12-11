@@ -6,3 +6,12 @@ export const BACKGROUND_LOGO =
 
 export const USER_AVATAR =
   "https://tse2.mm.bing.net/th?id=OIP.7DASfuq_r3rOiq4AAs75igAAAA&pid=Api&P=0&h=180";
+
+export const API_OPTIONS = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YTZiODUyYmE3ZDViNzAzMWQxYjliNWRiYjY1ZWQ0NyIsInN1YiI6IjY1NmUxN2YxM2RjMzEzMDBmZWRhMzhiNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZE20Jj9Y3Y6g4FgTujCN0O2ylLruVt8mR4kq5bPZUcg",
+  },
+};

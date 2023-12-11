@@ -87,18 +87,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - BugFix :- Sign Up user display name and Profile picture update
 - BugFix :- if the user is not logged in redirect /browse to login page and vice-versa
 - Unsubscribed to the onAuthStateChange Callback
-
-
+- add hard coded value to the constant file
+- registr tbdb api, create an app and get access token
+- Get data from tmdb now playing movies list api
+- custom hook for now playing movie
+- create MovieSlice
+- Update store with movie data
+- Planng for main container and secondary container
+- fetch data for trailer video
+- update store with trailer video data
+- Embedded the youtube video and make it autoplay and mute
+- Tailwind classes to make main contaner look awesome
+- build secondary component
 
 # Features
+
 - Login/SgnUp
-    - SignIn/SgnUp form
-    - redirect to browse Page
-- Browse (after authontication)
-    - Header
-    - Man Movie
-        - Trailer in Background
-        - Title & Description
-        - Movie Suggestion
-            - Movie List * n
--Netflix GPT
+  - SignIn/SgnUp form
+  - redirect to browse Page
+- Browse (after authontication) - Header - Man Movie - Trailer in Background - Title & Description - Movie Suggestion - Movie List \* n
+  -Netflix GPT
