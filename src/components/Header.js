@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useEffect } from "react";
 import { LOGO, SUPPORTED_LANG } from "../utils/constants";
-import { toggleGptSearchView } from "../utils/gptSlice";
+import { addGptMovieResult, toggleGptSearchView } from "../utils/gptSlice";
 import { changeLang } from "../utils/configSlice";
 
 const Header = () => {
@@ -39,6 +39,7 @@ const Header = () => {
           })
         );
         navigate("/browse");
+        //navigate("/watch");
       } else {
         dispatch(removeUser());
         navigate("/");
@@ -50,13 +51,14 @@ const Header = () => {
   const handleGptSearchClick = () => {
     //toggle
     dispatch(toggleGptSearchView());
+    dispatch(addGptMovieResult({ movieResults: null, movieNames: null }));
   };
 
   return (
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
-      <img className="w-44 " src={LOGO} alt="logo" />
+    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between ">
+      <img className="mx-auto md:mx-0 w-44 " src={LOGO} alt="logo" />
       {user && (
-        <div className="flex p-2 ">
+        <div className="flex p-2 justify-between ">
           {showGptSearch && (
             <select
               className="p-2 m-2 bg-gray-500 text-white rounded-xl font-semibold"
@@ -75,7 +77,11 @@ const Header = () => {
           >
             {showGptSearch ? "Home" : "GPT Search"}
           </button>
-          <img className="w-12 h-12 " src={user?.photoURL} alt="user-icon" />
+          <img
+            className="hidden md:inline-block w-12 h-12 "
+            src={user?.photoURL}
+            alt="user-icon"
+          />
           <button onClick={handleSignOut} className="text-white font-bold">
             Sign Out
           </button>

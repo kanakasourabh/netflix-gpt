@@ -106,9 +106,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - custom hook popular movies, top rated..
 - GPT search page
 - GPT search bar
-- Multi lang feature 
+- Multi lang feature
 - integrate GPT API
-- 
+- get API key
+- API call
+- fetched gpt movie suggestion from tmdb
+- reused movie list components to make movie recomendation container
+- Memoization
+- added .env
+- .env to git ignore
+- made our site responsive
 
 # Features
 

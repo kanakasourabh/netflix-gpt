@@ -11,8 +11,8 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YTZiODUyYmE3ZDViNzAzMWQxYjliNWRiYjY1ZWQ0NyIsInN1YiI6IjY1NmUxN2YxM2RjMzEzMDBmZWRhMzhiNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZE20Jj9Y3Y6g4FgTujCN0O2ylLruVt8mR4kq5bPZUcg",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB,
+    // eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YTZiODUyYmE3ZDViNzAzMWQxYjliNWRiYjY1ZWQ0NyIsInN1YiI6IjY1NmUxN2YxM2RjMzEzMDBmZWRhMzhiNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZE20Jj9Y3Y6g4FgTujCN0O2ylLruVt8mR4kq5bPZUcg",
   },
 };
 
@@ -23,3 +23,5 @@ export const SUPPORTED_LANG = [
   { identifier: "ka", name: "Kannada" },
   { identifier: "hi", name: "Hindi" },
 ];
+
+export const OPEN_AI_KEY = process.env.REACT_APP_OPENAI;

@@ -2,17 +2,18 @@ import React from "react";
 import VideoTitle from "./VideoTitle";
 import VideoBackground from "./VideoBackground";
 import { useSelector } from "react-redux";
+import MainContainerShimmer from "../ShimmerCard/MainContainerShimmer";
 
 function MainContainer() {
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
 
-  if (!movies) return;
+  if (!movies) return <MainContainerShimmer />;
 
   const mainMovie = movies[0];
 
   const { original_title, overview, id } = mainMovie;
   return (
-    <div>
+    <div className="pt-[40%] bg-black md:pt-0">
       <VideoTitle title={original_title} overview={overview} />
       <VideoBackground movieId={id} />
     </div>
