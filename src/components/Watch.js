@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import VideoBackground from "./VideoBackground";
-import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Watch = () => {
-  const [id, setId] = useState();
+  // const [id, setId] = useState();
   const { movieId } = useParams();
-  setId(movieId);
-  const navigate = useNavigate();
-  const handleBackClick = () => {
-    navigate("/browse");
-  };
+  // setId(movieId);
+  // const navigate = useNavigate();
+  // const handleBackClick = () => {
+  //   navigate("/browse");
+  // };
   return (
-    <div className="absolute">
-      <button className="font-bold text-3xl" onClick={handleBackClick}>
-        🔙
-      </button>
-      {/* <VideoBackground /> */}
+    <div className="absolute bg-black pb-5">
+      <Link to="/browse">
+        <button className="font-bold text-3xl">🔙</button>
+      </Link>
+      <VideoBackground movieId={movieId} />
     </div>
   );
 };

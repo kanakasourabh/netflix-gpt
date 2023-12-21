@@ -1,6 +1,7 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 import ShimmerMovies from "../ShimmerCard/ShimmerMovies";
+import { Link } from "react-router-dom";
 
 const MovieList = ({ title, movies }) => {
   return (
@@ -10,7 +11,9 @@ const MovieList = ({ title, movies }) => {
         <div className="flex">
           {movies ? (
             movies?.map((movie) => (
-              <MovieCard key={movie.id} posterPath={movie?.poster_path} />
+              <Link to={"/watch/" + movie.id}>
+                <MovieCard key={movie.id} posterPath={movie?.poster_path} />
+              </Link>
             ))
           ) : (
             <ShimmerMovies />
